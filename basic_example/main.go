@@ -25,7 +25,7 @@ func must(err error) {
 func main() {
 	q, err := rego.New(
 		rego.Query(defaultQuery),
-		rego.Module("official_example", string(opa_rules.ReadPolicy())),
+		rego.Module("official_example", string(opa_rules.ReadOfficialExamplePolicy())),
 	).PrepareForEval(context.Background())
 	must(err)
 
